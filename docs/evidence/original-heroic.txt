@@ -1,0 +1,110 @@
+戰
+Song of Ashes
+Twenty Historical Battles
+은빛 군단
+Commander · 새벽
+Codex
+Achievements
+Commander & Banner
+Settings
+Tactical History
+Heroic Musou
+11
+Burn the Boats
+Battle of Julu · 207 BCE
+12
+The Overlord’s Return
+Battle of Pengcheng · 205 BCE
+13
+Eight Hundred at Hefei
+Battle of Hefei · 215
+14
+Thunder at Kunyang
+Battle of Kunyang · 23
+15
+Rescue at Changban
+Battle of Changban · 208
+16
+Ride through Hexi
+Hexi Campaign · 121 BCE
+17
+Encirclement beyond the Gobi
+Mobei Campaign · 119 BCE
+18
+The White-Robed Advance
+Chen Qingzhi’s Northern Expedition · 529
+19
+Capture the King at Hulao
+Battle of Hulao · 621
+20
+Break the Horsemen at Yancheng
+Battle of Yancheng · 1140
+Break the enemy with your elite guard.
+Take the hero’s role on the recommended side.
+
+Victories 0 / 20
+Heroic Musou
+Burn the Boats
+Battle of Julu · 207 BCE
+Julu · Zhang River and Qin supply corridor
+Chu ArmyQin Army ◇ Key Position
+Chu Army
+600troops
+
+Chu Linebreakers〔Linebreaker Guard〕240 Chu Sword Veterans〔Royal Guard〕160 Chu Halberdiers〔Dragontooth Pikes〕120 Chu Raiders〔Bloodwolf Riders〕80
+
+Commander · Xiang Yu ｜ You command this army
+
+Qin Army
+18,000troops
+
+Qin Armored Infantry〔Ironwall Guard〕5,000 Qin Spearmen〔Spearmen〕5,000 Qin Heavy Crossbows〔Heavy Crossbow Guard〕4,000 Supply-route Guards〔Sword Infantry〕2,500 Zhang Han’s Relief Cavalry〔Armored Shock Cavalry〕1,500
+
+Commander · Wang Li
+
+Hero’s Role · Xiang Yu ｜ Xiang Yu之勇
+Your commander keeps your name and appearance, with the hero’s abilities for this battle.
+
+Terrain: River landing / Qin camp plateau / covered supply route
+Uphill movement is slower; gentle descents help charges. Ridges block direct fire, while arrows can pass over lower crests.
+
+Historical Background
+Date & Era
+
+207 BCE · End of Qin · Anti-Qin rebellion
+As Qin besieged Zhao at Julu, Xiang Yu crossed the river to attack the siege army and its supply network.
+
+The Opposing Armies
+
+Xiang Yu’s Chu army aided the besieged Zhao force while other rebel armies initially watched. Wang Li commanded Qin’s siege troops. Zhang Han led a separate field force supporting them through a supply corridor; these were not one camp garrison.
+
+Why They Fought
+
+After defeating Xiang Liang at Dingtao, Qin advanced north and trapped King Xie of Zhao and Zhang Er at Julu. Other relief armies feared Qin and hesitated. Sent to relieve Zhao, Xiang Yu took command after killing Song Yi and decided on a river crossing and decisive attack.
+
+The Battle
+
+In 207 BCE Xiang Yu sent an advance force across, then committed his army, destroying cooking vessels and boats and carrying short-term rations. Repeated attacks cut Qin’s supply corridor and defeated Wang Li’s army. Other rebel forces subsequently joined the pursuit.
+
+Historical Outcome
+
+Wang Li was captured and Julu relieved, establishing Xiang Yu’s military prestige. Zhang Han was not immediately killed here; he surrendered during later fighting and political pressure. Cutting supplies, defeating the siege army and securing Zhang Han’s surrender were related but distinct stages.
+
+Recommended Side · Chu Army
+Commander: 10,000 HP and 60% damage reduction, accompanied by a small elite guard. Health recovers out of combat.
+Tactics
+Your commander and picked Chu troops can break dense formations. Cut off the two supply camps first.
+Dash through massed Qin troops and use area attacks to open a path for your infantry.
+Qin’s main camp is on high ground. Watch for crossbows and reinforcements on the flank.
+Five Battle Achievements
+Victory Conditions
+Chu: capture both supply camps and Wang Li’s main camp, securing each for 15 seconds.
+
+Two to three full skill rotations into a dense enemy formation can fill Musou. Misses add nothing, and repeat hits on the same enemy within one skill count once.
+
+Historical Source · 史記 · Xiang Yu本紀
+Armory
+March
+Equipment changes appearance and moves. Battle rules determine strength.
+WASD Move · Mouse Aim / Attack · Q E R Skills · T Musou
+Twenty battles · Your own banner

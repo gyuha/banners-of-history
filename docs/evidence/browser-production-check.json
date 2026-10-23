@@ -1,0 +1,11 @@
+{
+  "url": "http://localhost:4173/",
+  "title": "재의 군기 — 역사를 다시 쓰는 전장",
+  "webglReady": true,
+  "cameraCaptionCleared": true,
+  "noBattleToast": true,
+  "defaultName": "새벽",
+  "freshRecord": true,
+  "localResources": true,
+  "overflow": false
+}

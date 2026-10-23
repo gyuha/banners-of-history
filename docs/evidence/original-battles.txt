@@ -1,0 +1,113 @@
+戰
+Song of Ashes
+Twenty Historical Battles
+은빛 군단
+Commander · 새벽
+Codex
+Achievements
+Commander & Banner
+Settings
+Tactical History
+Heroic Musou
+01
+Shield Wall on the Ridge
+Battle of Hastings · 1066
+02
+Trap at the Crossing
+Battle of Stirling Bridge · 1297
+03
+Seize Mount Dingjun
+Battle of Mount Dingjun · 219
+04
+Arrows over the Mud
+Battle of Agincourt · 1415
+05
+The Closing Pincers
+Battle of Cannae · 216 BCE
+06
+Crossbows at Maling
+Battle of Maling · 341 BCE
+07
+Banners behind the Lines
+Battle of Jingxing · 204 BCE
+08
+Burn the Grain at Wuchao
+Battle of Guandu · 200
+09
+Pikes beside the Marsh
+Battle of Bannockburn · 1314
+10
+Break the Wing at Issus
+Battle of Issus · 333 BCE
+Outnumbered. Use the terrain to win.
+Both armies field advanced troops.
+
+Victories 0 / 20
+Tactical History
+Shield Wall on the Ridge
+Battle of Hastings · 1066
+England · Senlac Ridge
+English ArmyNorman Army ◇ Key Position
+English Army
+6,000troops
+
+Saxon Spearmen〔Halberd Guard〕2,400 Saxon Shield Guard〔Ironwall Guard〕1,600 Royal Axemen〔Ironcleaver Veterans〕1,200 English Archers〔Longbowmen〕800
+
+Commander · Harold II ｜ You command this army
+
+Norman Army
+8,000troops
+
+Norman Shields〔Shield Infantry〕2,000 Norman Spearmen〔Spearmen〕2,000 Norman Archers〔Longbowmen〕1,600 Norman Knights〔Shock Cavalry〕1,600 Breton Cavalry〔Raiding Cavalry〕800
+
+Commander · William, Duke of Normandy
+
+Lead English Army · Recommended
+Lead Norman Army
+
+Front commands: you lead North Ridge; Lieutenant 1 leads South Ridge.
+With no unit selected, orders affect your front. Select a unit card or a unit on the tactical map to take over another front, then return it to the lieutenant.
+Hold the ridge shield wall. If the southern wing breaks, the lieutenant withdraws to the reverse slope rather than pursuing cavalry downhill.
+
+Terrain: Long ridge / gentle slopes / flank paths
+Uphill movement is slower; gentle descents help charges. Ridges block direct fire, while arrows can pass over lower crests.
+
+Historical Background
+Date & Era
+
+1066 CE · Medieval England · End of Anglo-Saxon rule and the Norman Conquest
+A disputed succession brought Harold II and William of Normandy into a struggle for the English crown.
+
+The Opposing Armies
+
+King Harold II defended the ridge with household warriors and levies fighting on foot. Duke William brought Norman, Breton and other contingents, combining archers, infantry and cavalry.
+
+Why They Fought
+
+Edward the Confessor died in 1066 without a direct heir. English nobles chose Harold, while William claimed that the succession had been promised to him and assembled an invasion fleet. Harold defeated a Norwegian invasion in the north, then marched south to face the Normans.
+
+The Battle
+
+On 14 October the English held the heights with shields and spears, while elite warriors fought with axes. Norman archers, infantry and cavalry attacked repeatedly. Some English troops pursued retreating enemies away from their formation and high ground, exposing themselves to counterattack. Fighting continued into the evening.
+
+Historical Outcome
+
+Harold was killed and the English line collapsed. William later entered London and was crowned king. Harold’s precise manner of death and some tactical details remain disputed. Formation discipline and the combined protection of spears, shields and terrain are central to the battle.
+
+Recommended Side · English Army
+Your commander is vulnerable and deals 40% of baseline damage. Stay alive and win through troops and terrain.
+Tactics
+Hold four spear companies facing west in front of the north and south flags. Use Hold (X) to brace; moving or pursuing lowers their spears.
+Shields absorb arrows. Keep axemen behind the spear line and archers on the reverse slope. Turn nearby pikes to meet cavalry on the flanks.
+Secure one flag first. Avoid chasing cavalry downhill with the entire army; select individual companies and leave a reserve at the other flag.
+Five Battle Achievements
+Victory Conditions
+English: hold at least one ridge flag for nine minutes, or rout the Normans.
+Your commander’s death means defeat.
+
+Historical Source · English Heritage · 黑斯廷斯
+Armory
+March
+Equipment changes appearance and moves. Battle rules determine strength.
+WASD Move · Mouse Aim / Attack · Q E R Skills · T Musou
+Twenty battles · Your own banner

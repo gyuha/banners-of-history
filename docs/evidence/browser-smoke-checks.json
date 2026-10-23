@@ -1,0 +1,117 @@
+{
+  "checks": [
+    {
+      "name": "전장 1 실제 출전과 목표 표시",
+      "pass": true
+    },
+    {
+      "name": "전장 2 실제 출전과 목표 표시",
+      "pass": true
+    },
+    {
+      "name": "전장 3 실제 출전과 목표 표시",
+      "pass": true
+    },
+    {
+      "name": "전장 4 실제 출전과 목표 표시",
+      "pass": true
+    },
+    {
+      "name": "전장 5 실제 출전과 목표 표시",
+      "pass": true
+    },
+    {
+      "name": "전장 6 실제 출전과 목표 표시",
+      "pass": true
+    },
+    {
+      "name": "전장 7 실제 출전과 목표 표시",
+      "pass": true
+    },
+    {
+      "name": "전장 8 실제 출전과 목표 표시",
+      "pass": true
+    },
+    {
+      "name": "전장 9 실제 출전과 목표 표시",
+      "pass": true
+    },
+    {
+      "name": "전장 10 실제 출전과 목표 표시",
+      "pass": true
+    },
+    {
+      "name": "전장 11 실제 출전과 목표 표시",
+      "pass": true
+    },
+    {
+      "name": "전장 12 실제 출전과 목표 표시",
+      "pass": true
+    },
+    {
+      "name": "전장 13 실제 출전과 목표 표시",
+      "pass": true
+    },
+    {
+      "name": "전장 14 실제 출전과 목표 표시",
+      "pass": true
+    },
+    {
+      "name": "전장 15 실제 출전과 목표 표시",
+      "pass": true
+    },
+    {
+      "name": "전장 16 실제 출전과 목표 표시",
+      "pass": true
+    },
+    {
+      "name": "전장 17 실제 출전과 목표 표시",
+      "pass": true
+    },
+    {
+      "name": "전장 18 실제 출전과 목표 표시",
+      "pass": true
+    },
+    {
+      "name": "전장 19 실제 출전과 목표 표시",
+      "pass": true
+    },
+    {
+      "name": "전장 20 실제 출전과 목표 표시",
+      "pass": true
+    },
+    {
+      "name": "확대 버튼",
+      "pass": true
+    },
+    {
+      "name": "축소 버튼",
+      "pass": true
+    },
+    {
+      "name": "휠 확대",
+      "pass": true
+    },
+    {
+      "name": "전술 지도",
+      "pass": true
+    },
+    {
+      "name": "좌군 지휘",
+      "pass": true
+    },
+    {
+      "name": "일시정지 중 시간과 기술 정지",
+      "pass": true
+    },
+    {
+      "name": "지도 종료 후 사령부 복귀",
+      "pass": true
+    },
+    {
+      "name": "자바스크립트 실행 오류 없음",
+      "pass": true
+    }
+  ],
+  "errors": []
+}

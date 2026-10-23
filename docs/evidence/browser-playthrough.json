@@ -1,0 +1,35 @@
+[
+  {
+    "time": 0.49949999999999994,
+    "hp": 3000,
+    "kills": 0,
+    "allies": 18,
+    "enemies": 100,
+    "rage": 0,
+    "event": "출진",
+    "fps": 72
+  },
+  {
+    "time": 4.945900001525877,
+    "hp": 2930,
+    "kills": 3,
+    "allies": 16,
+    "enemies": 96,
+    "rage": 22.5,
+    "event": "질풍 찌르기",
+    "fps": 31
+  },
+  {
+    "time": 8.608299999237058,
+    "result": "victory",
+    "hp": 2695,
+    "kills": 97,
+    "enemies": 1,
+    "objective": {
+      "label": "적 유효 병력 1% · 20% 이하로 격퇴",
+      "progress": 100,
+      "complete": true,
+      "returnRequired": false
+    }
+  }
+]

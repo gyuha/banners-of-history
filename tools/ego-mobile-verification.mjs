@@ -1,0 +1,18 @@
+const task=await taskSpace(4),page=task.page('p2');
+const fs=await import('node:fs/promises');
+await page.reload();await page.waitForFunction(()=>!!window.__BANNER_DEBUG__);
+await page.cdp('Emulation.setDeviceMetricsOverride',{width:390,height:844,deviceScaleFactor:1,mobile:true});await page.cdp('Emulation.setTouchEmulationEnabled',{enabled:true,maxTouchPoints:1});
+await page.evaluate(()=>scrollTo(0,0));await page.waitForFunction(()=>innerWidth===390&&document.fonts.status==='loaded');
+const portrait=await page.evaluate(()=>({width:innerWidth,height:innerHeight,scrollWidth:document.documentElement.scrollWidth,nav:[...document.querySelectorAll('.nav-btn')].map(b=>({text:b.innerText,whiteSpace:getComputedStyle(b).whiteSpace}))}));
+console.log(await page.screenshot({path:'/Users/gyuha/workspace/c-rtc/docs/evidence/rebuilt-mobile-lobby.png'}));
+await page.cdp('Emulation.setDeviceMetricsOverride',{width:844,height:390,deviceScaleFactor:1,mobile:true});await page.waitForFunction(()=>innerWidth===844);
+await page.evaluate(()=>document.querySelector('button[data-action="launch"]').scrollIntoView({block:'center'}));await page.click('button[data-action="launch"]');
+const before=await page.evaluate(()=>window.__BANNER_DEBUG__.getState().hero);
+const rect=await page.evaluate(()=>{const r=document.querySelector('[data-move="w"]').getBoundingClientRect();return {x:r.x+r.width/2,y:r.y+r.height/2}});
+await page.mouse.move(rect.x,rect.y);await page.mouse.down();await page.waitForFunction(before=>{const p=window.__BANNER_DEBUG__.getState().hero;return Math.hypot(p.x-before.x,p.z-before.z)>3},before,{timeout:5000});await page.mouse.up();
+const landscape=await page.evaluate(()=>({width:innerWidth,height:innerHeight,scrollWidth:document.documentElement.scrollWidth,touch:getComputedStyle(document.querySelector('.touch-movement')).display,warning:getComputedStyle(document.querySelector('#mobile-warning')).display,hero:window.__BANNER_DEBUG__.getState().hero}));
+await page.waitForFunction(()=>!document.querySelector('.toast'));
+console.log(await page.screenshot({path:'/Users/gyuha/workspace/c-rtc/docs/evidence/rebuilt-mobile-combat.png'}));
+await page.keyboard.press('Escape');await page.click('[data-action="return"]');
+const findings={portrait,landscape,touchMoved:Math.hypot(landscape.hero.x-before.x,landscape.hero.z-before.z)>3,portraitOverflow:portrait.scrollWidth>portrait.width,landscapeOverflow:landscape.scrollWidth>landscape.width};
+await fs.writeFile('/Users/gyuha/workspace/c-rtc/docs/evidence/browser-mobile-checks.json',JSON.stringify(findings,null,2));console.log(findings);

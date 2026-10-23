@@ -1,0 +1,30 @@
+[
+  {
+    "name": "도감 열기",
+    "pass": true
+  },
+  {
+    "name": "6종 병종 탭",
+    "pass": true
+  },
+  {
+    "name": "8개 무기 장착",
+    "pass": true
+  },
+  {
+    "name": "20개 전투 기록",
+    "pass": true
+  },
+  {
+    "name": "환경 설정 저장",
+    "pass": true
+  },
+  {
+    "name": "영웅전10개",
+    "pass": true
+  },
+  {
+    "name": "역사 상세와 신규 이미지",
+    "pass": true
+  }
+]

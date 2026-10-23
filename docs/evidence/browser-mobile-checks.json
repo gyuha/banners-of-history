@@ -1,0 +1,39 @@
+{
+  "portrait": {
+    "width": 390,
+    "height": 844,
+    "scrollWidth": 390,
+    "nav": [
+      {
+        "text": "전장",
+        "whiteSpace": "nowrap"
+      },
+      {
+        "text": "지휘관",
+        "whiteSpace": "nowrap"
+      },
+      {
+        "text": "병종 도감",
+        "whiteSpace": "nowrap"
+      },
+      {
+        "text": "전투 기록",
+        "whiteSpace": "nowrap"
+      }
+    ]
+  },
+  "landscape": {
+    "width": 844,
+    "height": 390,
+    "scrollWidth": 844,
+    "touch": "block",
+    "warning": "none",
+    "hero": {
+      "x": -1.737969528802039,
+      "z": 17.459616983604818
+    }
+  },
+  "touchMoved": true,
+  "portraitOverflow": false,
+  "landscapeOverflow": false
+}

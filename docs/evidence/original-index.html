@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head><meta name="robots" content="noindex,nofollow,noarchive"><meta name="referrer" content="same-origin">
+<meta charset="utf-8"><link rel="icon" href="data:,">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<title>Song of Ashes | Historical Battles</title>
+<link rel="preload" as="image" href="img/keyart.webp">
+<script>(()=>{let m='auto';try{m=localStorage.getItem('song-of-ashes.language.v1')||'auto'}catch(e){}let l=m==='auto'?((navigator.languages||[navigator.language]).map(x=>/^zh(?:-|$)/i.test(x)?'zh-Hant':/^en(?:-|$)/i.test(x)?'en':null).find(Boolean)||'en'):m;document.documentElement.lang=l;if(l==='zh-Hant')for(const name of ['huninn','notoseriftc']){const a=document.createElement('link');a.rel='stylesheet';a.href='fonts/'+name+'.css';a.dataset.languageFont=a.href.split('/').slice(-2).join('/');document.head.append(a)}})();</script>
+<meta name="application-name" content="灰燼之歌">
+
+<style>
+  :root {
+    --ink: #120e0c; --panel: rgba(18, 13, 11, 0.86); --gold: #c9a24a; --gold2: #f0d27a; --cinnabar: #b8322c;
+    --paper: #efe2c4; --dim: #a8987a; --blue: #4a7ad8; --red: #d8443a;
+    --kai: var(--ui);
+    --ui: "Huninn", "Microsoft JhengHei", "微軟正黑體", "PingFang TC", "Noto Sans TC", sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; overflow: hidden; background: #0a0807; color: var(--paper); font-family: var(--ui); user-select: none; }
+  input, select, textarea { font-family: var(--ui); }
+  canvas#gl { position: fixed; inset: 0; image-rendering: pixelated; cursor: crosshair; }
+  canvas#ov { position: fixed; inset: 0; pointer-events: none; }
+  .frame { background: var(--panel); border: 2px solid #3a2c1c; box-shadow: inset 0 0 0 1px var(--gold), 0 4px 18px rgba(0,0,0,.55); }
+  
+  #hud { display: none; }
+  #hud.show { display: block; }
+  #topbar { position: fixed; top: 10px; left: 50%; transform: translateX(-50%); display: flex; align-items: center; gap: 14px; padding: 6px 16px; font-family: var(--kai); }
+  #topbar .side { display: flex; flex-direction: column; width: 220px; gap: 3px; }
+  #topbar .side .lbl { display: flex; justify-content: space-between; font-size: 15px; }
+  #topbar .side.en { text-align: right; }
+  #topbar .bar { height: 8px; background: #2a1f18; border: 1px solid #000; position: relative; overflow: hidden; }
+  #topbar .bar i { position: absolute; top: 0; bottom: 0; left: 0; background: linear-gradient(#e85a4a, #a8281e); }
+  #topbar .side.en .bar i { left: auto; right: 0; background: linear-gradient(#6a98f0, #2a4ea8); }
+  #t-time { font-size: 22px; color: var(--gold2); min-width: 72px; text-align: center; letter-spacing: 1px; }
+  #log { position: fixed; top: 12px; left: 12px; width: 380px; display: flex; flex-direction: column; gap: 4px; font-size: 13px; }
+  #log .ev { background: rgba(10,8,6,.72); border-left: 3px solid var(--gold); padding: 4px 8px; transition: opacity 2s; }
+  #log .ev.bad { border-left-color: var(--cinnabar); color: #ffc9b8; }
+  #log .ev.big { font-family: var(--kai); font-size: 15px; color: var(--gold2); }
+  #log .ev.fade { opacity: 0; }
+  #heropanel { position: fixed; left: 12px; bottom: 12px; display: flex; gap: 10px; padding: 10px; align-items: flex-end; }
+  #portrait { width: 96px; height: 96px; image-rendering: pixelated; background: radial-gradient(#5a2a1c, #1a0f0a); border: 2px solid var(--gold); }
+  #herostats { width: 310px; display: flex; flex-direction: column; gap: 5px; }
+  #herostats .name { font-family: var(--kai); font-size: 20px; color: var(--gold2); display: flex; justify-content: space-between; align-items: baseline; }
+  #herostats .name small { font-size: 13px; color: var(--paper); font-family: var(--ui); }
+  .gauge { position: relative; height: 14px; background: #1c1410; border: 1px solid #000; box-shadow: inset 0 0 0 1px #4a3826; }
+  .gauge i { position: absolute; left: 0; top: 0; bottom: 0; }
+  #hp i { background: linear-gradient(#9ae070, #3a8a2a); }
+  #mu i { background: linear-gradient(#ffe48a, #d89a20); }
+  #st { height: 8px; display: none; } #st i { background: linear-gradient(#a8e0ff, #3a88c8); } #mp { height: 6px; } #mp i { background: linear-gradient(#d8b0ff, #7a4ac8); }
+  #mu.full i { background: linear-gradient(#fff6c8, #ffb020); animation: glow .5s infinite alternate; }
+  @keyframes glow { to { filter: brightness(1.35); } }
+  .gauge span { position: absolute; inset: 0; font-size: 11px; line-height: 14px; text-align: center; text-shadow: 0 1px 0 #000; }
+  #skills { display: flex; gap: 5px; margin-top: 2px; }
+  .sk { position: relative; width: 40px; height: 44px; border: 1px solid var(--gold); background: #241a12; display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 11px; overflow: hidden; }
+  .sk b { font-family: var(--kai); font-size: 16px; color: var(--gold2); }
+  .sk em { position: absolute; top: 1px; left: 3px; font-style: normal; font-size: 10px; color: var(--dim); }
+  .sk.cool::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: var(--cd); background: rgba(0,0,0,.65); }
+  #sk-t { opacity: .5; }
+  #sk-t.ready { opacity: 1; box-shadow: 0 0 10px #ffc040; border-color: #ffe08a; }
+  #regs { position: fixed; bottom: 12px; left: 460px; right: 290px; display: flex; gap: 6px; justify-content: center; pointer-events: none; }
+  #regs.many .card { width: 88px; }
+  #regs.many .card .st { font-size: 9px; }
+  #regs.lots .card { width: 80px; padding: 3px 3px 4px; }
+  #regs.lots .card .nm { font-size: 13px; }
+  #regs.lots .card canvas { width: 56px; height: 56px; }
+  .card { position: relative; width: 104px; padding: 4px 5px 5px; background: var(--panel); border: 1px solid #4a3826; cursor: pointer; pointer-events: auto; }
+  .card canvas { display: block; width: 64px; height: 64px; margin: -8px auto -6px; image-rendering: pixelated; }
+  .card.ai { border-color: #6ab0c8; box-shadow: inset 0 0 0 1px #2c5a6a; }
+  .card.ai::after { content: '電腦'; position: absolute; top: 3px; right: 4px; font-size: 10px; padding: 0 3px; background: #2c5a6a; color: #d8f4ff; }
+  #settings { background: rgba(8,6,5,.88); z-index: 60; }
+  #settings .box { padding: 20px 28px; max-width: 1100px; }
+  #settings h2 { font-family: var(--kai); font-size: 34px; color: var(--gold2); letter-spacing: 10px; margin: 0 0 6px; text-align: center; }
+  #keymsg { min-height: 20px; text-align: center; color: #d8ccb0; font-size: 13px; margin-bottom: 10px; }
+  #keylist { display: flex; gap: 18px; flex-wrap: wrap; justify-content: center; }
+  .kgroup { min-width: 230px; }
+  .kgroup h3 { font-family: var(--kai); color: var(--gold2); font-size: 18px; margin: 4px 0 6px; border-bottom: 1px solid #4a3826; }
+  .krow { display: flex; justify-content: space-between; align-items: center; gap: 10px; font-size: 14px; margin: 3px 0; }
+  .krow i { font-style: normal; color: #a89a80; font-size: 13px; }
+  .kbtn { font-family: inherit; font-size: 14px; letter-spacing: 0; padding: 2px 10px; min-width: 74px; }
+  .kbtn.changed { border-color: #ffd23a; color: #ffe8a0; }
+  .kbtn.wait { background: #5a2a14; color: #fff; animation: kblink .8s infinite; }
+  @keyframes kblink { 50% { background: #8a3a18; } }
+  #menu-tools #volrow { margin-top: 0; }
+  #menu-tools { margin-top: 14px; display: flex; gap: 12px; align-items: center; }
+  .card .key { position: absolute; top: 3px; left: 5px; font-size: 13px; color: var(--gold2); font-weight: bold; }
+  .card .nm { font-family: var(--kai); font-size: 15px; text-align: center; }
+  .card .bar { height: 4px; background: #241a12; margin-top: 3px; position: relative; }
+  .card .bar i { position: absolute; left: 0; top: 0; bottom: 0; }
+  .card .hp i { background: var(--red); }
+  .card .mo i { background: #e0c060; }
+  .card .st { font-size: 10px; color: var(--dim); text-align: center; margin-top: 3px; white-space: nowrap; }
+  .card.sel { border-color: var(--gold2); box-shadow: 0 0 0 1px var(--gold2), 0 0 12px rgba(240,210,122,.45); background: rgba(60,40,18,.9); }
+  .card.rout { border-color: #888; }
+  .card.dead { opacity: .35; filter: grayscale(1); }
+  #orders { position: fixed; bottom: 128px; left: 460px; right: 290px; text-align: center; overflow: hidden; text-overflow: ellipsis; font-size: 12px; color: var(--dim); background: rgba(10,8,6,.6); padding: 3px 10px; white-space: nowrap; }
+  #orders b { color: var(--gold2); font-weight: normal; }
+  #mmwrap { position: fixed; right: 12px; bottom: 12px; padding: 6px; }
+  #minimap { display: block; image-rendering: pixelated; }
+  #killbox { position: fixed; right: 18px; top: 40%; text-align: right; font-family: var(--kai); text-shadow: 2px 2px 0 #000; }
+  #killbox .k { font-size: 18px; color: var(--paper); }
+  #killbox .k b { font-size: 34px; color: var(--gold2); }
+  #combo { font-size: 20px; color: #ffd8a0; transition: opacity .3s; opacity: 0; }
+  #combo b { font-size: 44px; color: #fff; }
+  #siegehud { position: fixed; top: 64px; left: 50%; transform: translateX(-50%); width: 360px; padding: 6px 10px; display: none; font-size: 12px; }
+  #siegehud .gauge { height: 10px; margin: 2px 0 5px; }
+  #gate-fill { background: linear-gradient(#b08050, #6a4020); }
+  #cap-fill { background: linear-gradient(#ffd060, #c08010); }
+  #banner { position: fixed; top: 28%; left: 0; right: 0; text-align: center; font-family: var(--kai); font-size: 56px; color: var(--gold2); text-shadow: 3px 3px 0 #2a0c06, 0 0 24px rgba(0,0,0,.8); opacity: 0; transform: scale(.9); transition: opacity .25s, transform .25s; pointer-events: none; letter-spacing: 8px; }
+  #banner.show { opacity: 1; transform: scale(1); }
+  #banner.order { font-size: 30px; top: 70%; color: #fff1cc; letter-spacing: 4px; }
+  #banner.red { color: #ff7a5a; }
+  #banner.musou { color: #fff; font-size: 72px; text-shadow: 0 0 18px #ffb020, 3px 3px 0 #6a2a00; }
+  #banner.title { font-size: 64px; }
+  #perf { position: fixed; top: 4px; right: 8px; font: 12px monospace; color: #9f9; display: none; text-shadow: 1px 1px 0 #000; }
+  
+  .screen { position: fixed; inset: 0; display: none; align-items: center; justify-content: center; flex-direction: column; }
+  .screen.show { display: flex; }
+  #menu { background: radial-gradient(ellipse at 50% 35%, rgba(90,30,20,.55), rgba(8,6,5,.96) 70%), #0a0807; }
+  #menu h1 { font-family: var(--kai); font-size: 96px; margin: 0; color: var(--gold2); letter-spacing: 18px; text-shadow: 4px 4px 0 #3a0c06, 0 0 40px rgba(200,80,30,.35); }
+  #battles { display: flex; gap: 18px; flex-wrap: wrap; justify-content: center; max-width: 96vw; }
+  .bt { width: 250px; padding: 18px 18px 16px; cursor: pointer; transition: transform .15s, box-shadow .15s; }
+  .bt:hover { transform: translateY(-4px); box-shadow: inset 0 0 0 1px var(--gold2), 0 8px 26px rgba(200,140,40,.25); }
+  .bt h2 { font-family: var(--kai); margin: 0 0 4px; font-size: 28px; color: var(--gold2); letter-spacing: 3px; }
+  .bt .tag { display: inline-block; font-size: 12px; padding: 1px 7px; border: 1px solid var(--cinnabar); color: #ffb8a8; margin-bottom: 8px; }
+  .bt p { margin: 0; font-size: 13px; line-height: 1.6; color: #d8ccb0; }
+  #ctrl { margin-top: 30px; display: grid; grid-template-columns: repeat(3, auto); gap: 4px 34px; font-size: 13px; color: #cbbd9c; padding: 14px 22px; }
+  #ctrl b { color: var(--gold2); font-weight: normal; display: inline-block; min-width: 76px; }
+  #ctrl h3 { grid-column: span 1; margin: 0 0 4px; font-family: var(--kai); color: var(--paper); font-weight: normal; font-size: 16px; }
+  #volrow { margin-top: 16px; font-size: 13px; color: var(--dim); display: flex; gap: 10px; align-items: center; }
+  #loading { background: #0a0807; }
+  #loading .ttl { font-family: var(--kai); font-size: 40px; color: var(--gold2); letter-spacing: 10px; margin-bottom: 18px; }
+  #loading .gauge { width: 420px; height: 12px; }
+  #load-fill { background: linear-gradient(#ffd060, #b07010); width: 0; }
+  #load-txt { margin-top: 10px; color: var(--dim); font-size: 13px; }
+  #result { background: rgba(6,4,3,.72); }
+  #result .box { padding: 26px 40px; text-align: center; min-width: 420px; }
+  #res-title { font-family: var(--kai); font-size: 84px; letter-spacing: 20px; margin: 0 0 10px; }
+  #result.win #res-title { color: var(--gold2); text-shadow: 4px 4px 0 #5a2a00; }
+  #result.lose #res-title { color: #9a9a9a; text-shadow: 4px 4px 0 #000; }
+  #res-body div { display: flex; justify-content: space-between; padding: 5px 0; border-bottom: 1px solid #3a2c1c; font-size: 15px; }
+  #res-body b { font-weight: normal; color: var(--dim); }
+  .btns { margin-top: 18px; display: flex; gap: 12px; justify-content: center; }
+  button { font-family: var(--kai); font-size: 20px; color: var(--paper); background: #2a1c12; border: 1px solid var(--gold); padding: 8px 26px; cursor: pointer; letter-spacing: 3px; }
+  button:hover { background: #4a2c16; color: var(--gold2); }
+  #pause { background: rgba(6,4,3,.6); }
+  #help { position: fixed; top: 50%; left: 50%; transform: translate(-50%,-50%); padding: 18px 26px; display: none; font-size: 14px; line-height: 1.9; }
+  #help.show { display: block; }
+  #help b { color: var(--gold2); font-weight: normal; display: inline-block; min-width: 96px; }
+</style>
+
+
+
+
+<link rel="stylesheet" href="css/demo.css?v=6dec4303f9">
+<link rel="stylesheet" href="css/demo-ornaments.css?v=1daeac190d">
+<link rel="stylesheet" href="css/demo-handheld.css?v=e96c7de6c8">
+<link rel="stylesheet" href="css/i18n.css">
+<link rel="stylesheet" href="css/loading.css">
+<link rel="stylesheet" href="css/demo-journal.css">
+</head>
+<body class="hb-ornament">
+<main id="demo-shell" class="ui-click"><div class="hb-loading"><div><h1>灰燼之歌</h1><p>軍旗初展・兵馬集結</p></div></div></main>
+<div id="demo-identity"><canvas id="demo-hud-crest" width="70" height="84"></canvas><span><b id="demo-identity-name"></b><small id="demo-identity-sub"></small></span></div><div id="demo-banner"></div><div id="hb-session-tools" class="ui-click"><button id="hb-zoom-toggle" class="hb-hud-button" aria-expanded="false" aria-controls="hb-camera">縮放</button><button id="hb-pause-button" class="hb-hud-button ui-click">暫停／操作</button></div>
+<div id="hb-camera" class="ui-click" aria-label="鏡頭縮放"><label for="hb-zoom">縮放</label><button id="hb-zoom-out" aria-label="拉遠鏡頭">−</button><input id="hb-zoom" type="range" min="0.025" max="4" step="0.01" value="1.25" aria-label="鏡頭倍率"><button id="hb-zoom-in" aria-label="拉近鏡頭">＋</button><output id="hb-zoom-value" for="hb-zoom">1.25×</output></div>
+<canvas id="gl"></canvas>
+<div class="vign"></div>
+<canvas id="ov"></canvas>
+
+<div id="hud">
+  <div id="topbar" class="frame">
+    <div class="side me"><div class="lbl"><span class="tm-me">我軍</span><span id="s-me">0</span></div><div class="bar"><i id="b-me"></i></div></div>
+    <div id="t-time">00:00</div>
+    <div class="side en"><div class="lbl"><span id="s-en">0</span><span class="tm-en">敵軍</span></div><div class="bar"><i id="b-en"></i></div></div>
+  </div>
+  <div id="siegehud" class="frame">
+    <div id="gate-txt">城門</div><div class="gauge"><i id="gate-fill"></i></div>
+    <div id="cap-txt">主堡奪取</div><div class="gauge"><i id="cap-fill"></i></div>
+  </div>
+  <div id="hb-roster" class="ui-click"><div class="hb-roster-tools"><button id="hb-prev-regs" aria-label="上一頁兵團">◀</button><span id="hb-roster-page"></span><button id="hb-next-regs" aria-label="下一頁兵團">▶</button><button id="hb-select-all">選取全軍</button><button id="hb-hold-here">固守現位</button><button id="hb-tactical" aria-pressed="false">戰術全圖</button><button id="hb-speed">戰速 1×</button></div></div>
+  <div id="hudstrip"></div>
+  <div id="cmdbar"></div>
+  <div id="wstat" class="frame"></div>
+  <div id="wmenu"></div>
+  <div id="wquest" class="frame" style="display:none"></div>
+  <div id="wright"><div id="wclock" class="frame"></div><div id="wpeace" class="frame"></div></div>
+  <div id="log"></div>
+  <div id="heropanel" class="frame">
+    <canvas id="portrait" width="96" height="96"></canvas>
+    <div id="herostats">
+      <div class="name"><span id="hero-nm">主帥</span> <small>擊破 <span id="kills2"></span></small></div>
+      <div class="gauge" id="hp"><i id="hp-fill"></i><span id="hp-txt"></span></div>
+      <div id="hsub"></div>
+      <div class="gauge" id="mu"><i id="mu-fill"></i><span>無雙</span></div>
+      <div class="gauge" id="st"><i id="st-fill"></i></div>
+      <div class="gauge" id="mp" style="display:none"><i id="mp-fill"></i></div>
+    </div>
+  </div>
+  
+  <div id="skills">
+        <div class="sk" id="sk-l"><em>左鍵</em><b>連斬</b></div>
+        <div class="sk" id="sk-rb"><em>右鍵</em><b>蓄力</b></div>
+        <div class="sk" id="sk-q"><em data-key="dash">Q</em><b>突進</b></div>
+        <div class="sk" id="sk-e"><em data-key="slam">E</em><b>震地</b></div>
+        <div class="sk" id="sk-r"><em data-key="roar">R</em><b>戰吼</b></div>
+        <div class="sk" id="sk-y" style="display:none"><em data-key="skill4">Y</em><b>—</b></div>
+        <div class="sk" id="sk-sw" style="display:none"><em data-key="swap">J</em><b>換武器</b></div>
+        <div class="sk" id="sk-t"><em data-key="musou">T</em><b>無雙</b></div>
+        <div class="sk" id="sk-sp"><em data-key="dodge">空白</em><b>閃避</b></div>
+      </div>
+  <div id="orders">
+    <div class="ohd"><span id="ord-who">指揮：全軍</span><small>不選兵團＝對全軍下令</small></div>
+    <div class="og">
+      <span class="o" data-c="follow"><b data-key="follow">C</b>列陣向前</span><span class="o" data-c="attack" title="進攻游標處的敵隊（指地面＝列陣前往）"><b data-key="attack">V</b>進攻</span>
+      <span class="o" data-c="charge"><b data-key="charge">Z</b>衝鋒</span><span class="o" data-c="hold" title="在游標處列陣固守"><b data-key="hold">X</b>固守</span>
+      <span class="o" data-c="auto" title="交給電腦指揮（再按收回）"><b data-key="auto">B</b>電腦指揮</span>
+      <button type="button" class="o f ui-click" data-c="rect" aria-pressed="false"><b data-key="rect">F</b>方陣</button><button type="button" class="o f ui-click" data-c="circle" aria-pressed="false"><b data-key="circle">G</b>圓陣</button><button type="button" class="o f ui-click" data-c="wedge" aria-pressed="false"><b data-key="wedge">H</b>楔型陣</button><button type="button" class="o f ui-click" data-c="snake" aria-pressed="false"><b data-key="snake">[</b>長蛇陣</button><button type="button" class="o f ui-click" data-c="hollow" aria-pressed="false"><b data-key="hollow">]</b>空心方陣</button><span id="hb-formation-state">陣形：方陣</span>
+    </div>
+    <div class="oft"><b>1–9</b>切換兵團　<b data-key="all">`</b>全軍　<b data-key="help">F1</b>說明</div>
+  </div>
+  <div id="regs"></div>
+  <div id="mmwrap" class="frame"><canvas id="minimap"></canvas></div>
+  <div id="killbox">
+    <div class="k">擊破 <b id="kills">0</b></div>
+    <div id="combo"><b id="combo-n">0</b> 連擊</div>
+  </div>
+</div>
+<div id="banner"></div>
+<div id="wdlg" class="frame"></div>
+<div id="svc" class="frame"></div>
+<div id="perf"></div>
+
+
+
+
+<div id="loading" class="screen show" data-no-translate><div class="load-card"><small>灰燼之歌 · HISTORICAL BATTLES</small><div class="ttl">Song of Ashes</div><div class="gauge"><i id="load-fill"></i></div><div id="load-txt">載入中 / Loading · 0%</div><div id="load-detail">整備兵馬 / Preparing armies</div><button id="load-retry" hidden>重新載入 / Retry</button></div></div>
+<div id="pause" class="screen"><div class="box frame" style="padding:24px 40px;text-align:center"><div style="font-family:var(--kai);font-size:44px;color:var(--gold2);letter-spacing:12px;margin-bottom:14px">暫停</div><div class="btns"><button id="btn-resume">繼續</button><button id="btn-keys2">按鍵設定</button><button id="btn-codex">兵種圖鑑</button><button id="btn-quit">撤退</button></div></div></div>
+<div id="help" class="frame">
+  <b data-key="up,left,down,right" data-sep="">WASD</b> / <b data-key="sprint">Shift</b>移動／疾奔<br><b>左鍵</b>三段連斬（第三段擊飛）<br><b>右鍵按住</b>蓄力重擊，越久越強<br><b data-key="dash">Q</b>突進斬：貫穿敵陣<br><b data-key="slam">E</b>震地：周圍擊飛<br><b data-key="roar">R</b>戰吼：友軍士氣回升、攻擊提升、潰兵重整，震退身邊敵兵<br><b data-key="musou">T</b>無雙大招（無雙槽滿，依武器不同）<br><b data-key="dodge">空白</b>閃避（無敵）<br>
+  <b>1–9</b>切換到該隊（Shift 加選）；<b data-key="all">`</b>／<b>0</b> 回到本路（可接管副將）<br><b data-key="follow">C</b>列陣向前　<b data-key="attack">V</b>進攻游標處（指地面＝前往）　<b data-key="charge">Z</b>衝鋒　<b data-key="hold">X</b>游標處固守<br><b data-key="auto">B</b>交由電腦指揮（再按收回；下任何指令也會收回）<br><b data-key="rect,circle,wedge">F/G/H</b>方陣／圓陣／楔型陣<br><b data-key="snake,hollow">[/]</b>長蛇陣／空心方陣<br><b data-key="tactical">Tab</b>戰術地圖（左鍵選兵，Shift 加選，右鍵下令）<br><b data-key="help">F1</b>關閉說明　暫停選單可改按鍵
+</div>
+
+<div id="settings" class="screen"><div class="box frame"><h2>按鍵設定</h2><div id="keymsg"></div><div id="keylist"></div><div class="btns"><button id="key-reset">恢復預設</button><button id="key-close">完成</button></div></div></div>
+
+<script src="launch.js"></script></body>
+</html>
+
+<script defer src="https://static.itch.io/htmlgame.js" type="text/javascript"></script>

@@ -1,0 +1,78 @@
+은빛 군단
+새벽 · Chu Army
+Capture Camps 0 / 3 ｜ 11:43
+Zoom
+Pause / Controls
+Allies
+600
+00:16
+18000
+Enemy
+◀
+1 / 1 page · Total 4 Unit
+▶
+Select Front
+Hold現位
+Speed 1×
+1 · Main
+Chu Linebreakers
+240 troops · Moving
+2 · Main
+Chu Sword Veterans
+160 troops · Moving
+3 · Main
+Chu Halberdiers
+120 troops · Moving
+4 · Main
+Chu Raiders
+80 troops · Engaged
+새벽
+擊破0
+10000 / 10000
+Musou
+左鍵
+Combo
+右鍵
+Charge Up
+Q
+Breaking Thrust
+E
+Sweeping Strike
+R
+Breakout Spin
+Y
+Braced Counter
+T
+Army Breaker
+Space
+Dodge
+擊破0
+0連擊
+Command
+Tactical Map
+⛶
+Burn the Boats
+Pause
+Resume
+Key Bindings
+Troop Codex
+Return to Menu
+Achievements
+Screen Shake
+Effects
+Automatic
+High
+Medium
+Low
+Damage Numbers
+All
+Critical Hits Only
+Off
+Interface Mode
+Automatic
+Desktop
+Phone Landscape
+語言 / Language
+System / 跟隨系統
+English
+繁體中文

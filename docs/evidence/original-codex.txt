@@ -1,0 +1,164 @@
+戰
+Song of Ashes
+Twenty Historical Battles
+은빛 군단
+Commander · 새벽
+Codex
+Achievements
+Commander & Banner
+Settings
+Tactical History
+Heroic Musou
+11
+Burn the Boats
+Battle of Julu · 207 BCE
+12
+The Overlord’s Return
+Battle of Pengcheng · 205 BCE
+13
+Eight Hundred at Hefei
+Battle of Hefei · 215
+14
+Thunder at Kunyang
+Battle of Kunyang · 23
+15
+Rescue at Changban
+Battle of Changban · 208
+16
+Ride through Hexi
+Hexi Campaign · 121 BCE
+17
+Encirclement beyond the Gobi
+Mobei Campaign · 119 BCE
+18
+The White-Robed Advance
+Chen Qingzhi’s Northern Expedition · 529
+19
+Capture the King at Hulao
+Battle of Hulao · 621
+20
+Break the Horsemen at Yancheng
+Battle of Yancheng · 1140
+Break the enemy with your elite guard.
+Take the hero’s role on the recommended side.
+
+Victories 0 / 20
+Heroic Musou
+Break the Horsemen at Yancheng
+Battle of Yancheng · 1140
+China · Henan, Yancheng
+Song ArmyJin Army ◇ Key Position
+Song Army
+800troops
+
+Yue Army Pikes〔Dragontooth Pikes〕320 Beiwei Guards〔Royal Guard〕240 Assault Veterans〔Linebreaker Guard〕160 Beiwei Elite Horse〔Armored Shock Cavalry〕80
+
+Commander · Yue Fei ｜ You command this army
+
+Jin Army
+18,000troops
+
+Jin Heavy Horse〔Armored Shock Cavalry〕5,000 Wing Cavalry〔Raiding Cavalry〕4,000 Jin Armored Infantry〔Ironwall Guard〕3,200 Jin Spearmen〔Spearmen〕2,800 Jin Archers〔Longbowmen〕3,000
+
+Commander · Wanyan Zongbi
+
+Hero’s Role · Yue Fei ｜ Yue Fei · 步騎破敵
+Your commander keeps your name and appearance, with the hero’s abilities for this battle.
+
+Terrain: Pike frontage / flank slopes / cavalry approaches
+Uphill movement is slower; gentle descents help charges. Ridges block direct fire, while arrows can pass over lower crests.
+
+Historical Background
+Date & Era
+
+1140 CE · Southern Song · Shaoxing era, Song–Jin wars
+Yue Fei’s northern offensive met a renewed Jin effort to concentrate against his forward positions.
+
+The Opposing Armies
+
+Yue Fei commanded Song forces against a Jin army led by Wanyan Zongbi and other officers. Both sides employed infantry, cavalry and varied contingents during their prolonged struggle for the central plains.
+
+Why They Fought
+
+After peace efforts broke down, Jin again advanced south. Yue Fei moved into Henan and distributed troops among several towns. Jin sought to concentrate against his forward positions and main force, making Yancheng a key battlefield.
+
+The Battle
+
+The History of Song describes resistance to Jin cavalry and fighting by Yue Yun and others, with cooperation between infantry and horse. Later descriptions disagree on the form, scale and tactics of Tiefutu and Guaizima formations; the fighting cannot be reduced to one universal anti-cavalry trick.
+
+Historical Outcome
+
+Song won engagements around Yancheng, but court decisions and the wider situation halted the offensive and Yue Fei was ordered back. These victories neither ended the Song–Jin confrontation nor destroyed the Jin state.
+
+Recommended Side · Song Army
+Commander: 10,000 HP and 60% damage reduction, accompanied by a small elite guard. Health recovers out of combat.
+Tactics
+Brace the pikes before cavalry arrives and protect both flanks with guards. Do not scatter in pursuit.
+Once the heavy horse is stopped, move your commander in and follow with assault infantry.
+Keep your cavalry on the outer slopes to counter enemy archers and intercept broken troops.
+Five Battle Achievements
+Victory Conditions
+Song: reduce Jin’s effective strength below 20% of its starting level.
+
+Two to three full skill rotations into a dense enemy formation can fill Musou. Misses add nothing, and repeat hits on the same enemy within one skill count once.
+
+Historical Source · 宋史 · Yue Fei傳
+Armory
+March
+Equipment changes appearance and moves. Battle rules determine strength.
+WASD Move · Mouse Aim / Attack · Q E R Skills · T Musou
+Twenty battles · Your own banner
+Burn the Boats
+Song of Ashes · Battle Chronicle
+Field Manual
+Return
+Troops
+Weapons & Skills
+Terrain
+Battles
+Achievements
+Battle Troops
+Advanced Troops
+All Troops
+Break the Horsemen at Yancheng
+Spearmen
+Tier I
+Longbowmen
+Tier I
+Raiding Cavalry
+Tier I
+Ironwall Guard
+Tier II
+Royal Guard
+Tier III · Elite Guard
+Linebreaker Guard
+Tier III · Elite Guard
+Dragontooth Pikes
+Tier III · Elite Guard
+Armored Shock Cavalry
+Tier III · Elite Guard
+Tier I
+Spearmen
+HP per Soldier
+145
+Damage per Hit
+58
+Damage Reduction
+17%
+Melee Reach
+55
+Abilities
+
+Brace while holding position to stop frontal cavalry charges.
+
+Command Advice
+
+Order Hold and let the formation settle before the cavalry arrives.
+
+Weaknesses
+
+Close attacks during movement, or from the flanks and rear.
+
+Battle Roster
+
+Jin Army · Jin Spearmen 2,800

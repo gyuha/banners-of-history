@@ -1,0 +1,14 @@
+
+> banner-of-ashes@1.0.0 build
+> vite build
+
+vite v7.3.7 building client environment for production...
+transforming...
+✓ 10 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.83 kB │ gzip:   0.51 kB
+dist/assets/index-DcXRirss.css   48.77 kB │ gzip:  10.93 kB
+dist/assets/index-CYPBbnCv.js   102.70 kB │ gzip:  36.84 kB
+dist/assets/three-EJlL1fUY.js   478.93 kB │ gzip: 120.24 kB
+✓ built in 802ms

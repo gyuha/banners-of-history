@@ -1,0 +1,71 @@
+戰
+Song of Ashes
+Twenty Historical Battles
+은빛 군단
+Commander · 새벽
+Codex
+Achievements
+Commander & Banner
+Settings
+ARMORY
+Prepare for Battle
+
+Choose the weapons and armor your commander will wear into battle.
+
+Appearance Equipment
+
+Weapon types determine moves and skills: sword and shield, greatsword, polearm, bow or crossbow, and focus. Equipment within a type has no stat advantage. The battle determines health, damage, and defense.
+
+Mix equipment freely. No currency or unlock is required.
+
+새벽
+은빛 군단
+↶ Rotate
+Rotate ↷
+Weapons & Armor
+Weapon
+Oathbound Sword & Shield
+Templar Greatsword
+Shadow Longbow
+Highland Crossbow
+Sacred Cavalry Lance
+Angelic Staff
+Armor
+Sword & Shield Armor I
+Sword & Shield Armor II
+Sword & Shield Armor III
+Greatsword Armor I
+Greatsword Armor II
+Greatsword Armor III
+Heavy Cavalry Armor III
+Light Cavalry Armor III
+Helmet
+Sword & Shield Helmet I
+Sword & Shield Helmet II
+Sword & Shield Helmet III
+Greatsword Helmet I
+Greatsword Helmet II
+Greatsword Helmet III
+Heavy Cavalry Helmet III
+Light Cavalry Helmet III
+Cloak
+No Cloak
+Oathbound Cloak
+Infernal Cloak
+Mount
+On Foot
+Bay Horse
+Black Horse
+Grey Horse
+Barding
+No Barding
+Sacred Cavalry Barding
+Infernal Barding
+
+Your appearance carries across battles.
+Changes are applied to your commander in battle.
+
+Equip & ReturnCancel Changes
+WASD Move · Mouse Aim / Attack · Q E R Skills · T Musou
+Twenty battles · Your own banner
+Burn the Boats
