@@ -54,3 +54,18 @@ npm run preview
 - [GitHub Pages REST API](https://docs.github.com/en/rest/pages/pages)
 
 기존 `04-validation.md`의 최초 개발 검증은 로컬 실행을 기준으로 한다. 이 문서와 Pages 배포 기록이 이후 공개 배포 설정을 설명한다.
+
+## 공개 배포 검증 — 2026-10-23
+
+첫 자동 배포 [Actions 실행 39891165424](https://github.com/gyuha/banners-of-history/actions/runs/39891165424)가 성공했다. GitHub 러너에서도 테스트 26개와 빌드가 통과했으며 Pages artifact 업로드와 배포 단계가 완료되었다.
+
+Ego Lite에서 실제 HTTPS 공개 주소를 열어 다음을 확인했다.
+
+- 한글 사령부와 WebGL 전장이 정상 표시된다.
+- 군기 이미지, 프로젝트 로컬 글꼴, 작전 상세 키아트가 저장소 하위 경로에서 로드된다.
+- 출전하면 아군 44명과 적군 72명의 전투가 실행된다.
+- 카메라 확대가 1.15배로 적용되고 Q 기술이 실제 재사용 시간을 갖는다.
+- 일시정지 후 사령부로 복귀한다.
+- 수집된 JavaScript 실행 오류와 HTTP 400 이상 리소스 오류가 없다.
+
+검증 기록: [`github-pages-public-check.json`](evidence/github-pages-public-check.json), [공개 페이지 화면](evidence/github-pages-public.png). 배포 전 같은 하위 경로에서 수행한 검사는 [`github-pages-local-check.json`](evidence/github-pages-local-check.json)에 있다.
