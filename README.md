@@ -2,6 +2,8 @@
 
 원작 [Song of Ashes / Heroes Battlefield Demo](https://hank1105.itch.io/heroes-battlefield-demo)의 주요 플레이 흐름을 조사해 새 화면·리소스·한국어 UI로 구현한 Three.js 역사 액션·전술 게임입니다.
 
+**[웹에서 플레이하기](https://gyuha.com/banners-of-history/)**
+
 ## 실행
 
 Node.js 22.12 이상:
@@ -11,13 +13,19 @@ npm install
 npm run dev -- --port 5173
 ```
 
-브라우저에서 http://localhost:5173 을 엽니다.
+브라우저에서 http://localhost:5173/banners-of-history/ 를 엽니다.
 
 ```sh
 npm test        # 시뮬레이션·저장·업적·전투 데이터 검증
 npm run build   # dist 정적 배포 빌드
 npm run preview -- --port 4173
 ```
+
+빌드 미리보기: http://localhost:4173/banners-of-history/
+
+## GitHub Pages 배포
+
+`main`에 푸시하면 GitHub Actions가 의존성 설치, 테스트, 빌드를 수행하고 `dist`를 GitHub Pages에 배포합니다. Actions 탭에서 수동으로도 배포할 수 있습니다. 자세한 설정과 경로 규칙은 [배포 문서](docs/05-github-pages.md)를 참고하세요.
 
 ## 플레이
 

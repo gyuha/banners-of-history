@@ -1,0 +1,19 @@
+{
+  "initial": {
+    "path": "/banners-of-history/",
+    "home": "/banners-of-history/",
+    "crest": "http://localhost:4180/banners-of-history/assets/crest.svg",
+    "crestLoaded": true,
+    "canvas": true,
+    "fonts": "loaded"
+  },
+  "keyart": "http://localhost:4180/banners-of-history/assets/battle-keyart.png",
+  "battle": {
+    "running": true,
+    "hp": 1200,
+    "allies": 44,
+    "enemies": 72,
+    "skillCooldown": 9.93130000114441
+  },
+  "resourceErrors": []
+}
